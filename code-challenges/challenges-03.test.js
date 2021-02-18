@@ -198,6 +198,17 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 
 const sortNumbersByLength = (arr) => {
   // Solution code here...
+  function compare(left, right){
+    if(left.toString().length > right.toString().length){
+      return 1;
+    } else if(left.toString().length < right.toString().length){
+      return -1;
+    } else {
+      return 0;
+    }
+  }
+  arr.sort(compare);
+  return arr;
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -220,6 +231,17 @@ const people = [
 
 const sortPeople = (arr) => {
   // Solution code here...
+  function compare(left, right){
+    if(left.lastName > right.lastName){
+      return 1;
+    } else if(left.lastName < right.lastName){
+      return -1;
+    } else {
+      return 0;
+    }
+  }
+  arr.sort(compare);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -233,7 +255,30 @@ If two people have the same full name, the younger one should come first. Do not
 ------------------------------------------------------------------------------------------------ */
 
 const sortPeopleBetter = (arr) => {
-  // Solution code here...
+  //Solution code here...
+  function compare(left, right){
+    if(left.lastName > right.lastName){
+      return 1;
+    } else if(left.lastName < right.lastName){
+      return -1;
+    } else {
+      if(left.firstName > right.firstName){
+        return 1;
+      } else if(left.firstName < right.firstName){
+        return -1;
+      } else {
+        if(left.age > right.age){
+          return 1;
+        } else if(left.age < right.age){
+          return -1;
+        } else {
+          return 0;
+        }
+      }
+    }
+  }
+  arr.sort(compare);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -260,6 +305,17 @@ const meetings = [
 
 const sortMeetingsByDay = (arr) => {
   // Solution code here...
+  // function compare(left, right){
+  //   if(left.dayOfWeek.getDay() > right.dayOfWeek.getDay()){
+  //     return 1;
+  //   } else if(left.dayOfWeek.getDay() < right.dayOfWeek.getDay()){
+  //     return -1;
+  //   } else {
+  //     return 0;
+  //   }
+  // }
+  // arr.sort(compare);
+  // return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -367,7 +423,7 @@ describe('Testing challenge 8', () => {
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should sort numbers by their length', () => {
     expect(sortNumbersByLength([10, 2.8, 1, -47.75])).toStrictEqual([1, 10, 2.8, -47.75]);
     expect(sortNumbersByLength([100, 2.82, 1, -47.75])).toStrictEqual([1, 100, 2.82, -47.75]);
@@ -375,7 +431,7 @@ xdescribe('Testing challenge 9', () => {
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should sort people by their last names', () => {
     expect(sortPeople(people)).toStrictEqual([
       new Person('Casey', 'Codefellow', 38),
@@ -387,7 +443,7 @@ xdescribe('Testing challenge 10', () => {
   });
 });
 
-xdescribe('Testing challenge 11', () => {
+describe('Testing challenge 11', () => {
   test('It should sort people with more strict ordering', () => {
     const family = [
       new Person('Casey', 'Codefellows', 55),
