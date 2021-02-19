@@ -25,7 +25,7 @@ Write a function named containsW that takes in a string. This function should us
 
 const containsW = (str) => {
   // Solution code here...
-  const regexToTest = /w/gm;
+  const regexToTest = /w/g;
   const outPutOfTest = regexToTest.test(str);
   return outPutOfTest;
 };
@@ -70,7 +70,7 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
-  const regex = /\b[A-Z][a-z]*\b/gm;
+  const regex = /\b[A-Z][a-z]*\b/g;
   return str.match(regex) || [];
 };
 
@@ -123,7 +123,7 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 
 const noPunctuation = str => {
   // Solution code here...
-  const regex = /\b[a-zA-Z\d]+\s{1}/gm;
+  const regex = /\b[a-zA-Z\d]+\s{1}/g;
   return str.match(regex) || [];
 };
 
@@ -144,7 +144,7 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 
 let hangman = (str) => {
   // Solution code here...
-  const regex = /[aeiouAEIOU]/gm;
+  const regex = /[aeiouAEIOU]/g;
   return str.replace(regex , '_' );
 };
 // Solved with https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
@@ -161,17 +161,11 @@ Hint: All of these words end with the letters "ells".
 
 const seashells = 'She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I\'m sure she sells seashore shells.';
 
-//seashells
-//shells
-//sells
-// "ells"
-
 const findShells = (str) => {
   // Solution code here...
-  // const results = [];
-  // return /^[s]eas[h]ells/
-  // return /^[sS]ct(\w{4})*$/.test(input);
-  // results.push(newArray);
+  const regex = /[s]?[e]?[a]?s[h]?ells/g;
+  return str.match(regex) || [];
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -302,7 +296,7 @@ describe('Testing challenge 9', () => {
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should return an array of instances of "sells", shells", and "seashells"', () => {
     expect(findShells(seashells)).toStrictEqual(['sells', 'seashells', 'shells', 'sells', 'seashells', 'sells', 'shells', 'sells', 'shells']);
     expect(findShells(seashells).length).toStrictEqual(9);
