@@ -42,7 +42,7 @@ const sortStarWarsCharacters = (starWarsArr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index. 
+Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index.
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
@@ -76,7 +76,7 @@ For example, if the input is 'Welcome', the output will be:
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
-  let result = [];
+  const result = [];
   // Solution code here...
   for (let i = 0; i <= str.length; i++) {
     result.push(str.slice(i));
@@ -93,7 +93,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
-  let results = [];
+  const results = [];
   for (let i = 0; i < arr.length; i++){
     results.push(arr.slice(i,i+1));
   }
@@ -142,11 +142,11 @@ const gruffaloCrumble = {
 };
 
 const listFoods = (recipe) => {
-  let result = [];
+  const result = [];
   // Solution code here...
   recipe.ingredients.forEach( value => {
-    let a = value.indexOf(' ');
-    let b = value.indexOf(' ', a+1);
+    const a = value.indexOf(" ");
+    const b = value.indexOf(" ", a+1);
     result.push(value.slice(b+1));
   });
   return result;
@@ -161,8 +161,19 @@ You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
 const splitFoods = (recipe) => {
-  let result = [];
+  const result = [];
   // Solution code here...
+  const arr = [];
+  const arr2 = [];
+  recipe.ingredients.forEach(value => {
+    arr.push(value.split(" "));
+  });
+  arr.forEach(value => {
+    arr2.push(value.slice(2, value.length));
+  });
+  arr2.forEach(value => {
+    result.push(value.join(" "));
+  });
   return result;
 };
 
@@ -178,7 +189,18 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 
 const stepActions = (recipe) => {
   let result = [];
+  let arr = [];
+  let arr2 = [];
   // Solution code here...
+  recipe.steps.forEach(value => {
+    arr.push(value.split(" "));
+  });
+  arr.forEach(value => {
+    arr2.push(value.slice(0, 1));
+  });
+  arr2.forEach(value => {
+    result.push(value.join(","));
+  });
   return result;
 };
 
@@ -197,6 +219,9 @@ For example:
 
 const removeEvenValues = (arr) => {
   // Solution code here...
+  // return arr.filter(odd => {
+  //   odd % 2 !== 0;
+  // });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -214,9 +239,9 @@ removeLastCharacters('Gregor', -2) returns 'Gregor'
 removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
-const removeLastCharacters = (str, numberOfCharacters) => {
+function removeLastCharacters(str, numberOfCharacters) {
   // Solution code here...
-};
+}
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -313,13 +338,13 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return a list of foods', () => {
     expect(splitFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should return a list of recipe steps', () => {
     expect(stepActions(gruffaloCrumble)).toStrictEqual(['Pre-heat', 'De-prickle', 'Sprinkle', 'Mix', 'Grease', 'Combine', 'Fold', 'Spread', 'Bake']);
     expect(stepActions(gruffaloCrumble).length).toStrictEqual(9);

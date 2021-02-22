@@ -302,7 +302,7 @@ const meetings = [
   new Meeting('Monday', '0900', '0945'),
   new Meeting('Friday', '1200', '1345'),
 ];
-const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 const sortMeetingsByDay = (arr) => {
   // Solution code here...
@@ -329,10 +329,77 @@ Sort the meetings in the order that they start. If two meetings start at the sam
 
 You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
+const startTime = ['0900', '0930', '1145', '1200', '1300'];
+const endTime = ['0945', '1000', '1315', '1345', '1500'];
+
+const sortByDay = (left, right) => {
+  const leftDayNum = days.indexOf(left.dayOfWeek);
+  const rightDayNum = days.indexOf(right.dayOfWeek);
+  if (leftDayNum > rightDayNum) {
+    return 1;
+  } else if (leftDayNum < rightDayNum) {
+    return -1;
+  } else {
+    return sortByTime(left, right);
+  }
+};
+
+const sortByTime = (left, right) => {
+  const leftStart = startTime.indexOf(left.start);
+  const rightStart = startTime.indexOf(right.start);
+  if (leftStart > rightStart) {
+    return 1;
+  } else if (leftStart < rightStart) {
+    return -1;
+  } else {
+    return sortByMeetingLength(left, right);
+  }
+};
+
+const sortByMeetingLength = (left, right) => {
+  const leftEnd = endTime.indexOf(left.end);
+  const rightEnd = endTime.indexOf(right.end);
+  if (leftEnd > rightEnd) {
+    return 1;
+  } else if (leftEnd < rightEnd) {
+    return -1;
+  } else {
+    return 0;
+  }
+};
 
 const sortSchedule = (arr) => {
   // Solution code here...
+  return arr.sort(sortByDay);
 };
+  // This was the first way I did this, then I broke it out into multiple functions to make it easier to read and processe what was happening within the various levels of sorting.
+  //   const leftDayNum = days.indexOf(left.dayOfWeek);
+  //   const rightDayNum = days.indexOf(right.dayOfWeek);
+  //   const leftStart = startTime.indexOf(left.start);
+  //   const rightStart = startTime.indexOf(right.start);
+  //   const leftEnd = endTime.indexOf(left.end);
+  //   const rightEnd = endTime.indexOf(right.end);
+  //   if (leftDayNum > rightDayNum) {
+  //     return 1;
+  //   } else if (leftDayNum < rightDayNum) {
+  //     return -1;
+  //   } else {
+  //     if (leftStart > rightStart) {
+  //       return 1;
+  //     } else if (leftStart < rightStart) {
+  //       return -1;
+  //     } else {
+  //       if (leftEnd > rightEnd) {
+  //         return 1;
+  //       } else if (leftEnd < rightEnd) {
+  //         return -1;
+  //       } else {
+  //         return 0;
+  //       }
+  //     }
+  //   }
+  // });
+  // return arr;
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -476,7 +543,7 @@ describe('Testing challenge 12', () => {
   });
 });
 
-xdescribe('Testing challenge 13', () => {
+describe('Testing challenge 13', () => {
   test('It should sort meetings by when they happen', () => {
     expect(sortSchedule(meetings)).toStrictEqual([
       new Meeting('Monday', '0900', '0945'),
