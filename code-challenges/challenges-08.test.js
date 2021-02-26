@@ -1,17 +1,11 @@
 'use strict';
 
-const { contains } = require("cheerio");
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
 Write a function named returnTen, takes in a string and uses split and splice to return the last 10 characters from that string as elements of an array.
 
 ------------------------------------------------------------------------------------------------ */
-
-expect(returnTen('hello world')).toStrictEqual(['e','l','l','o',' ','w','o','r','l','d']);
-expect(returnTen('world')).toStrictEqual(['w','o','r','l','d']);
-
 
 function returnTen(str){
   // Solution code here...
