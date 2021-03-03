@@ -82,14 +82,16 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
-  const results = [];
-  stores.forEach( store => {
-    store.forEach ( (hour, index) => {
-      return results[index] = (results[index] || 0) + hour;
-    });
-  });
-  return results;
-};
+  const result=[];
+  for (let i = 0; i < hoursOpen.length; i++) {
+    let total = 0;
+    for (var j = 0; j < stores.length; j++){
+      total += stores[j][i];
+    }
+    result.push(total);
+  }
+  return result;
+}; // this was literally from my salmon cookies project
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -103,6 +105,11 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+  const results = [];
+  hours.forEach((time, i) => {
+    results.push({sales: `${data[i]} cookies`, time: `${time}`});
+  });
+  return results;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -128,6 +135,8 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  return arr.find(item => item.store === 'Pet store').items
+    .find(item => item.name === 'Treats').quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -260,7 +269,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should create an object of data for each store', () => {
     expect(salesData(hoursOpen, grandTotal(cookieStores))).toStrictEqual([
       { sales: '88 cookies', time: '9 a.m.' },
@@ -281,7 +290,7 @@ xdescribe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return the number 24', () => {
     expect(howManyTreats(errands)).toStrictEqual(24);
   });
