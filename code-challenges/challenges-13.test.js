@@ -134,15 +134,9 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 ------------------------------------------------------------------------------------------------ */
 
 const unenrollBrook = (arr) => {
-  // Solution code here...
-  // const roster = [];
-  // const brook = 'Brook';
-  // arr.every(value => {
-  //   if(value.includes(brook)) {
-  //     roster.push(value);
-  //   }
-  // });
-  // return roster;
+  return arr.map(value => {
+    return value.filter(brook => !/Brook/.test(brook));
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -182,6 +176,7 @@ For example, ['abcd', 'efgh', 'ijkl', 'mnop'] returns ['a', 'f', 'k', 'p']
 
 const characterByIndex = (arr) => {
   // Solution code here...
+  return arr.map((string, i) => string.charAt(i));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -275,7 +270,7 @@ describe('Testing challenge 8', () => {
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should remove Brook from all courses', () => {
     const roster = [
       ['Michelle', 'Allie', 'Brook TESTING'],
@@ -317,7 +312,7 @@ xdescribe('Testing challenge 10', () => {
   });
 });
 
-xdescribe('Testing challenge 11', () => {
+describe('Testing challenge 11', () => {
   test('It should return the ith character of the ith string', () => {
     const words = ['apple', 'banana', 'cantaloupe'];
 
