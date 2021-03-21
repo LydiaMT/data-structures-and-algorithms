@@ -219,9 +219,12 @@ For example:
 
 const removeEvenValues = (arr) => {
   // Solution code here...
-  // return arr.filter(odd => {
-  //   odd % 2 !== 0;
-  // });
+  for(let i = arr.length; i >= 0; i--){
+  // ^^ to start from the end of an array ^^
+    if(arr[i] % 2 === 0){
+      arr.splice(i, 1);
+    }
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -351,7 +354,7 @@ describe('Testing challenge 8', () => {
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should remove the even numbers from the array', () => {
     let list = [1, 2, 3, 4, 5, 6];
     removeEvenValues(list);
