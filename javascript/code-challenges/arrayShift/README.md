@@ -16,4 +16,3 @@ Since we were not supposed to use any methods for this function, I used only var
 ## Solution
 
 <img src="arrayshift.jpeg" width="500">
-
