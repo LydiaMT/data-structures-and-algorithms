@@ -5,6 +5,8 @@
 ### Table of Contents
 
 - Challenge 2: [Array Shift](javascript/code-challenges/arrayShift/README.md)
+- Challenge 2: [Array Binary Search](javascript/code-challenges/arrayBinarySearch/README.md)
+
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
 
