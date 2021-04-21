@@ -15,5 +15,5 @@ Since we were not supposed to use any methods for this function, I used only var
 
 ## Solution
 
-![array shift whiteboard](arrayshift.jpeg)
+<img src="arrayshift.jpeg" width="500">
 
