@@ -7,28 +7,27 @@
 - Challenge 2: [Array Shift](javascript/code-challenges/arrayShift/README.md)
 - Challenge 3: [Array Binary Search](javascript/code-challenges/arrayBinarySearch/README.md)
 - Challenge 5: [Linked List Implementation](javascript/code-challenges/linkedList/README.md)
+- Challenge 6: [Linked List append & insert before/after](javascript/code-challenges/linkedList/README2.md)
 
 
 # 301 Code Challenges
 
-- Challenge 1 - forEach
-- Challenge 2 - forEach
-- Challenge 3 - forEach
-- Challenge 4 - forEach
-- Challenge 5 - forEach
-- Challenge 6 - forEach
-- Challenge 7 - forEach
-- Challenge 8 - forEach
-- Challenge 9 - forEach
-- Challenge 10 - forEach
-- Challenge 11 - forEach
-- Challenge 12 - forEach
-- Challenge 13 - forEach
-- Challenge 14 - Everything
-
-
-
 ### Table of Contents
+
+- Challenge 1 - forEach
+- Challenge 2 - Pass by value, pass by reference
+- Challenge 3 - Sort
+- Challenge 4 - Regular Expressions, Part 1
+- Challenge 5 - Split, join, slice, splice
+- Challenge 6 - Object.key, Object.values, Object.entries
+- Challenge 7 - Map
+- Challenge 8 - Filter
+- Challenge 9 - Reduce
+- Challenge 10 - Chaining Methods
+- Challenge 11 - Regular Expressions, Part 2
+- Challenge 12 - Two-dimensional arrays
+- Challenge 13 - Includes, every, substring, charAt
+- Challenge 14 - Everything
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
 

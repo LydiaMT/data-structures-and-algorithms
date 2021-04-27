@@ -1,8 +1,8 @@
 # Singly Linked List
 
-- [Link to PR](https://github.com/LydiaMT/data-structures-and-algorithms/pull/22)
-- [Link to code](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/arrayShift/array-shift.js)
-- [Link to tests](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/arrayShift/__test__/array-shift.test.js)
+- [Link to PR](https://github.com/LydiaMT/data-structures-and-algorithms/pull/24)
+- [Link to code](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/linkedList/linked-list.js)
+- [Link to tests](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/linkedList/__test__/linked-list.test.js)
 
 ## Test
 `npm run test linked-list.test.js`
@@ -16,7 +16,7 @@
       - `"{ a } -> { b } -> { c } -> NULL"`
 ## Approach & Efficiency
 
-![linked list notes](linkedlist.jpeg)
+<img src="img/linkedlist.jpeg" width ="500">
 
 ## API
 

@@ -2,7 +2,7 @@
 
 const LinkedList = require('../linked-list');
 
-describe('------- LINKED LIST TEST -------', () => {
+describe('------- LINKED LIST TEST DAY 1-------', () => {
   it('Can successfully instantiate an empty linked list', () => {
     let list = new LinkedList();
     expect(list.head).toEqual(null);
@@ -64,6 +64,60 @@ describe('------- LINKED LIST TEST -------', () => {
     list.insert(6);
     list.insert(7);
     expect(list.toString()).toBe('{ 7 } => { 6 } => { 5 } => { 4 } => { 3 } => { 2 } => { 1 } => NULL');
+  });
+
+});
+
+describe('------- LINKED LIST TEST DAY 2 -------', () => {
+  it('Can successfully add a node to the end of the linked list', () => {
+    let list = new LinkedList();
+    list.append(1);
+    list.append(2);
+    expect(list.head.next.value).toEqual(2);
+  });
+
+  it('Can successfully add multiple nodes to the end of a linked list', () => {
+    let list = new LinkedList();
+    list.append(1);
+    list.append(2);
+    expect(list.head.next.value).toEqual(2);
+    list.append(3);
+    expect(list.head.next.next.value).toEqual(3);
+  });
+
+  it('Can successfully insert a node before a node located i the middle of a linked list', () => {
+    let list = new LinkedList();
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(4);
+    list.insertBefore(3, 'I am before 3');
+    expect(list.toString()).toEqual('{ 1 } => { 2 } => { I am before 3 } => { 3 } => { 4 } => NULL');
+
+  });
+
+  it('Can successfully insert a node before the first node of a linked list', () => {
+    let list = new LinkedList();
+    list.insert(1);
+    list.insert(2);
+    expect(list.head.value).toEqual(2);
+  });
+
+  it('Can successfully insert after a node in the middle of the linked list', () => {
+    let list = new LinkedList();
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(4);
+    list.insertBefore(3, 'I am before 3');
+    expect(list.toString()).toEqual('{ 1 } => { 2 } => { I am before 3 } => { 3 } => { 4 } => NULL');
+  });
+
+  it('Can successfully insert a node after the last node of the linked list', () => {
+    let list = new LinkedList();
+    list.append(1);
+    list.append(2);
+    expect(list.head.next.value).toEqual(2);
   });
 
 });

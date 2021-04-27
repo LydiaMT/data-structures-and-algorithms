@@ -23,15 +23,13 @@ class LinkedList {
       this.head = newNode;
       this.tail = this.head;
     }
-    //new node is now this.head
-    newNode.next = this.head;
-    // this.head now equals the new node
-    this.head = newNode;
-    // adds to the lenght(incase we need to use this later)
-    this.length++;
+    newNode.next = this.head; //new node is now this.head
+    this.head = newNode; // this.head now equals the new node
+    this.length++; // adds to the lenght(incase we need to use this later)
     return this;
   }
 
+  // Checks to see if a VALUE is already INCLUDED in the LL
   includes(value){
     var current = this.head;
     if(!this.head) return false;
@@ -41,43 +39,104 @@ class LinkedList {
         return true;
       }
       if(current !== current.next){
-        // make current value the next value for the following loop
-        current = current.next;
+        current = current.next; // make current value the next value for the following loop
       } else {
-        // break out of the loop
-        current = null;
+        current = null; // break out of the loop
       }
     }
-    // no matches, return false
-    return false;
+    return false; // no matches, return false
   }
 
+  // CONVERT current LL to STRING
   toString(){
     let output = '';
     var current = this.head;
     while(current){
       output += (`{ ${current.value} } => `);
       // if I'm not pointing to myself...
-      if(current !== current.next){
-        // on the next loop...point to the next node
-        current = current.next;
-        // else..I am point to myself becuase I'm at the end
+      if(current !== current.next){ // on the next loop...point to the next node
+        current = current.next; // else..I am point to myself becuase I'm at the end
       } else {
-        // so make me null
-        current = null;
+        current = null; // so make me null
       }
     }
     output += (`NULL`);
     return output;
   }
 
+  // ADD new value to the END of the LL
+  append(value) {
+    // instantiate a new node to add to our LL
+    let node = new Node(value);
+    if(!this.head) {
+      this.head = node;
+    } else {
+      // traversal happens here
+      let current = this.head; // start the traversal at the beginning (head) of the LL
+      while(current.next) { // this is the actual traversal
+        current = current.next; // this moves you along in your traversal
+      }
+      current.next = node;
+    }
+    return this;
+  }
+
+  // INSERT a value BEFORE a given value
+  insertBefore(value, newVal){
+    // edge case
+    if(!this.head){
+      return 'no linked list';
+    } else {
+      let checkValue = this.head;
+      if(checkValue.value === value){
+        this.head = new Node(newVal);
+        this.head.next = checkValue;
+      }
+      while(checkValue.next){
+        if(checkValue.next.value === value){
+          let newNode = new Node(newVal);
+          let tempValue = checkValue;
+          newNode.next = tempValue.next;
+          tempValue.next = newNode;
+          return true;
+        } else {
+          checkValue = checkValue.next;
+        }
+      }
+    }
+  }
+
+  // INSERT a value AFTER a given value
+  insertAfter(value, newVal){
+    // edge case
+    let newNode = new Node (newVal);
+    if(!this.head){
+      this.head = newNode;
+    }
+    // start at the beginning of the list
+    let checkValue = this.head;
+    while(checkValue.next) { // traverse the list
+      if(checkValue.value === value){
+        let tempValue = checkValue.next;
+        checkValue.next = newNode;
+        checkValue.next.next = tempValue;
+        return true;
+      } else {
+        checkValue = checkValue.next;
+      }
+    }
+  }
+
 }
 // ===========================================================================
 let newLinkedList = new LinkedList();
-newLinkedList.insert(10);
-newLinkedList.insert(20);
-newLinkedList.insert(30);
-newLinkedList.insert(40);
-newLinkedList.insert(50);
+newLinkedList.append(10);
+newLinkedList.append(20);
+newLinkedList.append(30);
+newLinkedList.append(40);
+newLinkedList.append(50);
+newLinkedList.toString();
+newLinkedList.insertBefore(30, 'AM I BEFORE 30?');
+newLinkedList.insertAfter(40, 'AM I AFTER 40?');
 // ===========================================================================
 module.exports = LinkedList;
