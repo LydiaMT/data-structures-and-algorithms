@@ -7,6 +7,7 @@
 - Challenge 2: [Array Shift](javascript/code-challenges/arrayShift/README.md)
 - Challenge 3: [Array Binary Search](javascript/code-challenges/arrayBinarySearch/README.md)
 - Challenge 5: [Linked List Implementation](javascript/code-challenges/linkedList/README.md)
+- Challenge 6: [Linked List append & insert before/after](javascript/code-challenges/linkedList/README2.md)
 
 
 # 301 Code Challenges

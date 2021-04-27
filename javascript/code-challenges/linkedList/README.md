@@ -16,7 +16,7 @@
       - `"{ a } -> { b } -> { c } -> NULL"`
 ## Approach & Efficiency
 
-<img src="linkedlist.jpeg" width ="500">
+<img src="img/linkedlist.jpeg" width ="500">
 
 ## API
 
