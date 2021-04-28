@@ -143,16 +143,59 @@ class LinkedList {
     return current.value;
   }
 
+  zipLists(list1, list2){
+    let list3, tail, previousNode;
+    list3 = new LinkedList('');
+    tail = list3;
+    while(list1 || list2){
+      if(list1 !== null) tail.value += list1.value;
+      if(list2 !== null) tail.value += list2.value;
+      tail.next = new LinkedList('');
+      previousNode = tail;
+      tail = tail.next;
+
+      list1 = list1 ? list1.next : list1;
+      list2 = list2 ? list2.next : list2;
+    }
+    previousNode.next = null;
+    return list3;
+  }
+
+  // ZIPs two linked lists and alternates their values
+  static zipLists(list1, list2){
+    let list3 = new LinkedList();
+    let current1 = list1.head;
+    let current2 = list2.head;
+    while(current1 || current2){
+      if(current1 !== null) {
+        // call on the append() function above to do the work
+        list3.append(current1.value);
+        current1 = current1.next ;
+      }
+      if(current2 !== null) {
+        list3.append(current2.value);
+        current2 = current2.next;
+      }
+    }
+    return list3;
+  }
+
 }
 // ===========================================================================
-let newLinkedList = new LinkedList();
-newLinkedList.append(10);
-newLinkedList.append(20);
-newLinkedList.append(30);
-newLinkedList.append(40);
-newLinkedList.append(50);
-newLinkedList.toString();
-newLinkedList.insertBefore(30, 'AM I BEFORE 30?');
-newLinkedList.insertAfter(40, 'AM I AFTER 40?');
+let newLinkedList1 = new LinkedList();
+newLinkedList1.append(1);
+newLinkedList1.append(2);
+newLinkedList1.append(3);
+newLinkedList1.append(4);
+newLinkedList1.append(5);
+let newLinkedList2 = new LinkedList();
+newLinkedList2.append('a');
+newLinkedList2.append('b');
+newLinkedList2.append('c');
+newLinkedList2.append('d');
+newLinkedList2.append('e');
+// called in this way because of the static utility function
+let newLinkedList3 = LinkedList.zipLists(newLinkedList1, newLinkedList2);
+newLinkedList3.toString();
 // ===========================================================================
 module.exports = LinkedList;
