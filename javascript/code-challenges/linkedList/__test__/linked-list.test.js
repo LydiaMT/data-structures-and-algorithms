@@ -173,3 +173,36 @@ describe('------- LINKED LIST TEST DAY 3 -------', () => {
   });
 
 });
+
+// ======================================== LINKED LIST TEST DAY 4 ======================================== //
+describe('------- LINKED LIST TEST DAY 4 -------', () => {
+  it('The two lists return a combined linked list, and the values alternate', () => {
+    let newLinkedList1 = new LinkedList();
+    newLinkedList1.append(1);
+    newLinkedList1.append(2);
+    newLinkedList1.append(3);
+    let newLinkedList2 = new LinkedList();
+    newLinkedList2.append('a');
+    newLinkedList2.append('b');
+    newLinkedList2.append('c');
+    let newLinkedList3 = LinkedList.zipLists(newLinkedList1, newLinkedList2);
+    expect(newLinkedList3.toString()).toEqual('{ 1 } => { a } => { 2 } => { b } => { 3 } => { c } => NULL');
+  });
+
+
+  it('If one list is longer, remaining nodes are attached to the end of the returned list', () => {
+    let newLinkedList1 = new LinkedList();
+    newLinkedList1.append(1);
+    newLinkedList1.append(2);
+    newLinkedList1.append(3);
+    let newLinkedList2 = new LinkedList();
+    newLinkedList2.append('a');
+    newLinkedList2.append('b');
+    newLinkedList2.append('c');
+    newLinkedList2.append('d');
+    newLinkedList2.append('e');
+    let newLinkedList3 = LinkedList.zipLists(newLinkedList1, newLinkedList2);
+    expect(newLinkedList3.toString()).toEqual('{ 1 } => { a } => { 2 } => { b } => { 3 } => { c } => { d } => { e } => NULL');
+  });
+
+});
