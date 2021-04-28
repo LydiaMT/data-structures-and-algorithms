@@ -78,6 +78,7 @@ class LinkedList {
       }
       current.next = node;
     }
+    this.length++; //ADDED
     return this;
   }
 
@@ -92,6 +93,7 @@ class LinkedList {
         this.head = new Node(newVal);
         this.head.next = checkValue;
       }
+      this.length++; //ADDED
       while(checkValue.next){
         if(checkValue.next.value === value){
           let newNode = new Node(newVal);
@@ -115,6 +117,7 @@ class LinkedList {
     }
     // start at the beginning of the list
     let checkValue = this.head;
+    this.length++; //ADDED
     while(checkValue.next) { // traverse the list
       if(checkValue.value === value){
         let tempValue = checkValue.next;
@@ -125,6 +128,19 @@ class LinkedList {
         checkValue = checkValue.next;
       }
     }
+  }
+
+  valueFromEnd(k){
+    // edge case
+    if(!this.head || k < 0 || k >= this.length) return 'Exception';
+    let i = 1; // Start at 1 because we're indexing from 0
+    let current = this.head;
+    // use the length tracker that was created in append()
+    while(current.next && i !== (this.length - k) ){
+      current = current.next;
+      i++;
+    }
+    return current.value;
   }
 
 }
