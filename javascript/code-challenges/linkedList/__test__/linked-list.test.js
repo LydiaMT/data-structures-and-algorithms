@@ -2,6 +2,7 @@
 
 const LinkedList = require('../linked-list');
 
+// ======================================== LINKED LIST TEST DAY 1 ======================================== //
 describe('------- LINKED LIST TEST DAY 1-------', () => {
   it('Can successfully instantiate an empty linked list', () => {
     let list = new LinkedList();
@@ -68,6 +69,7 @@ describe('------- LINKED LIST TEST DAY 1-------', () => {
 
 });
 
+// ======================================== LINKED LIST TEST DAY 2 ======================================== //
 describe('------- LINKED LIST TEST DAY 2 -------', () => {
   it('Can successfully add a node to the end of the linked list', () => {
     let list = new LinkedList();
@@ -118,6 +120,56 @@ describe('------- LINKED LIST TEST DAY 2 -------', () => {
     list.append(1);
     list.append(2);
     expect(list.head.next.value).toEqual(2);
+  });
+
+});
+
+// ======================================== LINKED LIST TEST DAY 3 ======================================== //
+describe('------- LINKED LIST TEST DAY 3 -------', () => {
+  it('Where k is greater than the length of the linked list', () => {
+    let list = new LinkedList();
+    list.append(10);
+    list.append(20);
+    list.append(30);
+    list.append(40);
+    list.append(50);
+    expect(list.valueFromEnd(7)).toEqual('Exception');
+  });
+
+  it('Where k and the length of the list are the same', () => {
+    let list = new LinkedList();
+    list.append(10);
+    list.append(20);
+    list.append(30);
+    list.append(40);
+    list.append(50);
+    expect(list.valueFromEnd(6)).toEqual('Exception');
+  });
+
+  it('Where k is not a positive integer', () => {
+    let list = new LinkedList();
+    list.append(10);
+    list.append(20);
+    list.append(30);
+    list.append(40);
+    list.append(50);
+    expect(list.valueFromEnd(-1)).toEqual('Exception');
+  });
+
+  it('Where the linked list is of a size 1', () => {
+    let list = new LinkedList();
+    list.append(10);
+    expect(list.valueFromEnd(1)).toEqual('Exception');
+  });
+
+  it('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
+    let list = new LinkedList();
+    list.append(10);
+    list.append(20);
+    list.append(30);
+    list.append(40);
+    list.append(50);
+    expect(list.valueFromEnd(3)).toEqual(20);
   });
 
 });
