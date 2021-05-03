@@ -12,8 +12,6 @@
 - Challenge 8: [Linked List - Zip List](javascript/code-challenges/linkedList/README4.md)
 - Challenge 10: [Stacks and Queues - Implementation](javascript/code-challenges/stacksAndQueues/README.md)
 
-
-
 # 301 Code Challenges
 
 ### Table of Contents
