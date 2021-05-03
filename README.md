@@ -10,6 +10,7 @@
 - Challenge 6: [Linked List - Append & insert before/after](javascript/code-challenges/linkedList/README2.md)
 - Challenge 7: [Linked List - Kth from the End](javascript/code-challenges/linkedList/README3.md)
 - Challenge 8: [Linked List - Zip List](javascript/code-challenges/linkedList/README4.md)
+- Challenge 10: [Stacks and Queues - Implementation](javascript/code-challenges/stacksAndQueues/README.md)
 
 # 301 Code Challenges
 
