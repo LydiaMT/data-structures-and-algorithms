@@ -3,11 +3,11 @@
 - [Link to PR](https://github.com/LydiaMT/data-structures-and-algorithms/pull/28)
 ## Stacks
 - [Link to code](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/stacksAndQueues/stacks.js)
-- [Link to tests](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/stacksAndQueues/__test__/stacks.test.js)
+- [Link to tests](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/stacksAndQueues/__tests__/stacks.test.js)
 
 ## Queues
 - [Link to code](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/stacksAndQueues/queues.js)
-- [Link to tests](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/stacksAndQueues/__test__/queues.test.js)
+- [Link to tests](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/stacksAndQueues/__tests__/queues.test.js)
 
 ## Challenge
 
