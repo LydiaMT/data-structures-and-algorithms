@@ -24,4 +24,4 @@
 ## API
 
 - [Colt Steele - Master Class](https://www.udemy.com/share/101XY2BUQedlZVRXQ=/)
-- Shout out to Peter Staker helping me realize that I could import the Queue class I made earlier this week. 
+- Shout out to Peter Staker for helping me realize that I could import the Queue class I made earlier this week. 
