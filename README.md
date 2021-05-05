@@ -14,7 +14,6 @@
 - Challenge 11: [Queue with Stacks](javascript/code-challenges/queueWithStacks/README.md)
 - Challenge 12: [Queue with Queues - FIFO Animal Shelter](javascript/code-challenges/fifoAnimalShelter/README.md)
 
-
 # 301 Code Challenges
 
 ### Table of Contents
