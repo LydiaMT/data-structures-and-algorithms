@@ -12,6 +12,7 @@
 - Challenge 8: [Linked List - Zip List](javascript/code-challenges/linkedList/README4.md)
 - Challenge 10: [Stacks and Queues - Implementation](javascript/code-challenges/stacksAndQueues/README.md)
 - Challenge 11: [Queue with Stacks](javascript/code-challenges/queueWithStacks/README.md)
+- Challenge 12: [Queue with Queues - FIFO Animal Shelter](javascript/code-challenges/fifoAnimalShelter/README.md)
 
 # 301 Code Challenges
 
