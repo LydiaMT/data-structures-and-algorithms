@@ -15,7 +15,6 @@
 - Challenge 12: [Queue with Queues - FIFO Animal Shelter](javascript/code-challenges/fifoAnimalShelter/README.md)
 - Challenge 13: [Mulit Bracket Validation](javascript/code-challenges/multiBracketValidation/README.md)
 
-
 # 301 Code Challenges
 
 ### Table of Contents
