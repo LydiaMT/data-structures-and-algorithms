@@ -2,20 +2,21 @@
 // ==================== Queues =========================
 
 class Node {
-  constructor(value){
+  constructor(value){ //instance of a node
     this.value = value;
     this.next = null;
   }
 }
 
 class Queue {
-  constructor(){
+  constructor(){ // instance of a queue
     this.size = 0, // houses the lenght and to enqueue and dequeue
     this.next = null, // mainly for dequeue
     this.first = null,
     this.last = null;
   }
 
+  // methods
   // ADDS to the END
   enqueue(val){
     var newNode = new Node(val);
