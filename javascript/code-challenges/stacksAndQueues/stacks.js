@@ -4,19 +4,20 @@
 // ==================== Stacks =========================
 
 class Node {
-  constructor(value){
+  constructor(value){ //instance of a node
     this.value = value;
     this.next = null;
   }
 }
 
 class Stack {
-  constructor(){
+  constructor(){ // instance of a stack
     this.first = null;
     this.last = null;
     this.size = 0; // size is like length here
   }
 
+  // methods
   // PUSH ADDS to the TOP of the stack
   push(val){
     var newNode = new Node(val);

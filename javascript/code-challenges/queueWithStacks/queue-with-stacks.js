@@ -34,19 +34,20 @@ class PseudoQueue {
 
 /// ============================== STACK ==============================
 class Node {
-  constructor(val){
+  constructor(val){ //instance of a node
     this.val = val;
     this.next = null;
   }
 }
 
 class Stack {
-  constructor(){
+  constructor(){ //instance of a stack
     this.first = null;
     this.last = null;
     this.length = 0;
   }
 
+  // methods
   push(val){
     let newNode = new Node(val);
     if (this.length === 0){
