@@ -15,6 +15,7 @@
 - Challenge 12: [Queue with Queues - FIFO Animal Shelter](javascript/code-challenges/fifoAnimalShelter/README.md)
 - Challenge 13: [Mulit Bracket Validation](javascript/code-challenges/multiBracketValidation/README.md)
 - Challenge 15: [Binary Tree and BST Implementation](javascript/code-challenges/tree/README.md)
+- Challenge 16: [Find the Maximum Value in a Binary Tree](javascript/code-challenges/tree/README2.md)
 
 # 301 Code Challenges
 

@@ -45,6 +45,18 @@ class BinaryTree{
     return results;
   }
 
+  findMaxValue(){
+    let array = this.postOrder();
+    console.log(array);
+    let currentMax = array[0];
+    for(var i = 1; i < array.length; i++){
+      if(array[i] > currentMax){
+        currentMax = array[i];
+      }
+    }
+    return currentMax;
+  }
+
 }
 
 module.exports = BinaryTree;
