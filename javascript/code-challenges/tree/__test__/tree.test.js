@@ -113,6 +113,30 @@ describe('With the findMaxValue method on the Binary Tree constructor class', ()
 
 });
 
+describe('With the breadthFirstSearch method on the Binary Tree constructor class', () => {
+  it('should return an array with the values in breadth first order', () => {
+    let a = new Node (2);
+    let b = new Node (7);
+    let c = new Node (5);
+    let d = new Node (2);
+    let e = new Node (6);
+    let f = new Node (9);
+    let g = new Node (5);
+    let h = new Node (11);
+    let i = new Node (4);
+    a.left = b;
+    a.right = c;
+    b.left = d;
+    b.right = e;
+    e.left = g;
+    e.right = h;
+    c.right = f;
+    f.left = i;
+    let bt = new BinaryTree(a);
+    expect(bt.breadthFirstSearch()).toEqual([2, 7, 5, 2, 6, 9, 5, 11, 4]);
+  });
+});
+
 // =============== BST tests ===============
 describe('With the binary search tree constructor class,', () => {
 
