@@ -43,6 +43,76 @@ describe('With the Binary Tree constructor class', () => {
 
 });
 
+describe('With the findMaxValue method on the Binary Tree constructor class', () => {
+
+  it('should return the highest value in a binary tree', () => {
+    let a = new Node (1);
+    let b = new Node (2);
+    let c = new Node (3);
+    let d = new Node (4);
+    let e = new Node (5);
+    let f = new Node (6);
+    let g = new Node (7);
+    let h = new Node (8);
+    let i = new Node (9);
+    a.left = b;
+    a.right = c;
+    b.left = d;
+    b.right = e;
+    e.left = g;
+    e.right = h;
+    c.right = f;
+    f.left = i;
+    let bt = new BinaryTree(a);
+    expect(bt.findMaxValue()).toBe(9);
+  });
+
+  it('should work on negative numbers', () => {
+    let a = new Node (-1);
+    let b = new Node (-2);
+    let c = new Node (-3);
+    let d = new Node (-4);
+    let e = new Node (-5);
+    let f = new Node (-6);
+    let g = new Node (-7);
+    let h = new Node (-8);
+    let i = new Node (-9);
+    a.left = b;
+    a.right = c;
+    b.left = d;
+    b.right = e;
+    e.left = g;
+    e.right = h;
+    c.right = f;
+    f.left = i;
+    let bt = new BinaryTree(a);
+    expect(bt.findMaxValue()).toBe(-1);
+  });
+
+  it('It should work on a non-sorted tree', () => {
+    let a = new Node (21);
+    let b = new Node (4);
+    let c = new Node (90);
+    let d = new Node (17);
+    let e = new Node (6);
+    let f = new Node (10);
+    let g = new Node (54);
+    let h = new Node (100);
+    let i = new Node (-7);
+    a.left = b;
+    a.right = c;
+    b.left = d;
+    b.right = e;
+    e.left = g;
+    e.right = h;
+    c.right = f;
+    f.left = i;
+    let bt = new BinaryTree(a);
+    expect(bt.findMaxValue()).toBe(100);
+  });
+
+});
+
 // =============== BST tests ===============
 describe('With the binary search tree constructor class,', () => {
 
