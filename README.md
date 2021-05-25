@@ -18,6 +18,7 @@
 - Challenge 16: [Find the Maximum Value in a Binary Tree](javascript/code-challenges/tree/README2.md)
 - Challenge 17: [Breadth Search First](javascript/code-challenges/tree/README3.md)
 - Challenge 17: [FizzBuzz Tree](javascript/code-challenges/fizzBuzzTree/README.md)
+- Challenge 26: [Insertion Sort](javascript/code-challenges/insertionSort/README.md)
 
 
 # 301 Code Challenges
