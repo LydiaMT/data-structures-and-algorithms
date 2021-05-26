@@ -19,6 +19,7 @@
 - Challenge 17: [Breadth Search First](javascript/code-challenges/tree/README3.md)
 - Challenge 18: [FizzBuzz Tree](javascript/code-challenges/fizzBuzzTree/README.md)
 - Challenge 26: [Insertion Sort](javascript/code-challenges/insertionSort/README.md)
+- Challenge 27: [Merge Sort](javascript/code-challenges/mergeSort/README.md)
 
 # 301 Code Challenges
 
