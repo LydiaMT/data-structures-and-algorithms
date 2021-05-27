@@ -20,6 +20,7 @@
 - Challenge 17: [FizzBuzz Tree](javascript/code-challenges/fizzBuzzTree/README.md)
 - Challenge 26: [Insertion Sort](javascript/code-challenges/insertionSort/README.md)
 - Challenge 27: [Merge Sort](javascript/code-challenges/mergeSort/README.md)
+- Challenge 28: [Quick Sort](javascript/code-challenges/quickSort/README.md)
 
 
 # 301 Code Challenges
