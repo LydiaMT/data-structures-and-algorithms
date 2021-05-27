@@ -1,9 +1,9 @@
 # Quick Sort
 ## Lydia Minehan-Tubic
 
-Quick Sort is a programming algorithm to sort an array. It is know as a divide and conquore method in that you take an array and split it. In the following pseudocode we start the algorithm with an array, the left most value of the array, and the right most value of the array. This method is recursive, and alters the array in place. 
+Quick Sort is a programming algorithm to sort an array. It is known as a divide and conquer method in that you take an array and split it. In the following pseudocode we start the algorithm with an array, the leftmost value of the array, and the rightmost value of the array. This method is recursive, and alters the array in place.
 
-See the following psuedocode for an example of how this algorithm works. 
+See the following pseudocode for an example of how this algorithm works.
 
 ## Pseudocode
 ```js
@@ -40,6 +40,6 @@ ALGORITHM Swap(arr, i, low)
 ```
 ## Under The hood
 
-The power of quick sort comes into play with the `partition` helper function. This function starts by picking an item as the `pivot` item, and the compares all items against it. This function creates a temporary left and right value, and while the left value is less than the right value check the values and see if you need to swap them one way or the other. This comes into play with the `if(arr[i] <= pivot)` conditional check. If they need to be swapped, the values are then passed into the `swap` helper function. 
+The power of quick sort comes into play with the `partition` helper function. This function starts by picking an item as the `pivot` item, and compares all items against it. This function creates a temporary left and right value, and while the left value is less than the right value check the values and see if you need to swap them one way or the other. This comes into play with the `if(arr[i] <= pivot)` conditional check. If they need to be swapped, the values are then passed into the `swap` helper function. 
 
 At the end of the sorting process, the `pivot` value is placed in the appropriate position in relation to the left and right values that it was just sorted against. 
