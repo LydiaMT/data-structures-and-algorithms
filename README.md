@@ -17,7 +17,7 @@
 - Challenge 15: [Binary Tree and BST Implementation](javascript/code-challenges/tree/README.md)
 - Challenge 16: [Find the Maximum Value in a Binary Tree](javascript/code-challenges/tree/README2.md)
 - Challenge 17: [Breadth Search First](javascript/code-challenges/tree/README3.md)
-- Challenge 17: [FizzBuzz Tree](javascript/code-challenges/fizzBuzzTree/README.md)
+- Challenge 18: [FizzBuzz Tree](javascript/code-challenges/fizzBuzzTree/README.md)
 - Challenge 26: [Insertion Sort](javascript/code-challenges/insertionSort/README.md)
 - Challenge 27: [Merge Sort](javascript/code-challenges/mergeSort/README.md)
 - Challenge 28: [Quick Sort](javascript/code-challenges/quickSort/README.md)
