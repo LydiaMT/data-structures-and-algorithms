@@ -21,6 +21,8 @@
 - Challenge 26: [Insertion Sort](javascript/code-challenges/insertionSort/README.md)
 - Challenge 27: [Merge Sort](javascript/code-challenges/mergeSort/README.md)
 - Challenge 28: [Quick Sort](javascript/code-challenges/quickSort/README.md)
+- Challenge 34: [Hash Table Implementation](javascript/code-challenges/treeIntersection/README.md)
+- Challenge 36: [Repeated Word](javascript/code-challenges/repeatedWord/README.md)
 
 # 301 Code Challenges
 
