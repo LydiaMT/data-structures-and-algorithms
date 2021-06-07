@@ -83,3 +83,26 @@ From the root of the `data-structures-and-algorithms` folder, execute the follow
 #### Live Tests
 
 Note that when you check your code into GitHub, all of your tests will automatically execute. These results should match your own, and will be found on the  **Actions** tab
+
+
+# TEMPLATE
+
+# Code Challenge
+
+- [Link to PR](https://github.com/LydiaMT/data-structures-and-algorithms/pull/39)
+- [Link to code](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/repeatedWord/repeated-word.js)
+- [Link to tests](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/repeatedWord/__test__/repeated-word.test.js)
+
+## Challenge
+
+## Test
+
+### `npm run test repeated-word.test.js`
+
+## Approach & Efficiency
+
+<img src="img/repeated-word.jpeg" width ="500">
+
+## API
+
+- [Colt Steele - Master Class](https://www.udemy.com/share/101XY2BUQedlZVRXQ=/)
