@@ -23,7 +23,6 @@
 - Challenge 28: [Quick Sort](javascript/code-challenges/quickSort/README.md)
 - Challenge 34: [Hash Table](javascript/code-challenges/hashtable/README.md)
 
-
 # 301 Code Challenges
 
 ### Table of Contents
