@@ -1,4 +1,4 @@
-# Repeated Word
+# Hash Table
 
 - [Link to PR](https://github.com/LydiaMT/data-structures-and-algorithms/pull/39)
 - [Link to code](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/hashtable/hashtable.js)
