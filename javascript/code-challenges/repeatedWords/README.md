@@ -1,6 +1,6 @@
 # Repeated Word
 
-- [Link to PR](https://github.com/LydiaMT/data-structures-and-algorithms/pull/41)
+- [Link to PR](https://github.com/LydiaMT/data-structures-and-algorithms/pull/44)
 - [Link to code](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/repeatedWord/repeated-word.js)
 - [Link to tests](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/repeatedWord/__test__/repeated-word.test.js)
 
@@ -24,10 +24,3 @@ Input | Output
 ## Test
 
 ### `npm run test repeatedWords.test.js`
-
-## Approach & Efficiency
-
-<img src="img/repeated-word.jpeg" width ="500">
-
-## API
-- [Colt Steele - Master Class](https://www.udemy.com/share/101XY2BUQedlZVRXQ=/)
