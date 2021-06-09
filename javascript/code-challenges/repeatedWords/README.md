@@ -1,8 +1,8 @@
 # Repeated Word
 
 - [Link to PR](https://github.com/LydiaMT/data-structures-and-algorithms/pull/44)
-- [Link to code](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/repeatedWord/repeated-word.js)
-- [Link to tests](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/repeatedWord/__test__/repeated-word.test.js)
+- [Link to code](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/repeatedWord/repeatedWords.js)
+- [Link to tests](https://github.com/LydiaMT/data-structures-and-algorithms/blob/main/javascript/code-challenges/repeatedWord/__test__/repeatedWords.test.js)
 
 ## Challenge
 
