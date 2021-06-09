@@ -75,16 +75,33 @@ class Hashmap {
 
 }
 
-// let hashmap = new Hashmap(3);
+function leftJoin(hm1, hm2){
+  for( let i = 0; i < hm1.size && i < hm2.size; i++){
+    if(hm1.storage[i].head.val[0] === hm2.storage[i].head.val[0]){
+      let valueToAdd = hm2.storage[i].head.val[1];
+      let currentArray = hm1.storage[i].head.val;
+      currentArray.push(valueToAdd);
+    } else {
+      let currentArray = hm1.storage[i].head.val;
+      currentArray.push(null);
+    }
+  }
+  return hm1;
+}
 
-// hashmap.set('brian', 'nations');
-// hashmap.set('alex', 'boberson');
-// hashmap.set('alex', 'johnson');
-// hashmap.set('alex', 'thompson');
-// hashmap.set('xale', 'coolness');
-// hashmap.set('sally', 'samsonite');
-// hashmap.set('tom', 'tiller');
+let hashmap1 = new Hashmap(5);
+let hashmap2 = new Hashmap(5);
 
-// console.log(hashmap);
+hashmap1.set('1', 'one');
+hashmap1.set('2', 'two');
+hashmap1.set('3', 'three');
+hashmap1.set('4', 'four');
+hashmap1.set('5', 'five');
+hashmap2.set('1', 'uno');
+hashmap2.set('2', 'dos');
+hashmap2.set('3', 'tres');
+hashmap2.set('4', 'cuatro');
+hashmap2.set('5', 'cinco');
+leftJoin(hashmap1, hashmap2);
 
-module.exports = Hashmap;
+module.exports = { leftJoin, Hashmap };

@@ -22,7 +22,9 @@
 - Challenge 27: [Merge Sort](javascript/code-challenges/mergeSort/README.md)
 - Challenge 28: [Quick Sort](javascript/code-challenges/quickSort/README.md)
 - Challenge 34: [Hash Table Implementation](javascript/code-challenges/hashtable/README.md)
-- Challenge 34: [Repeated Word](javascript/code-challenges/repeatedWords/README.md)
+- Challenge 36: [Repeated Word](javascript/code-challenges/repeatedWords/README.md)
+- Challenge 37: [Left Join](javascript/code-challenges/leftJoin/README.md)
+
 
 # 301 Code Challenges
 
