@@ -25,7 +25,6 @@
 - Challenge 36: [Repeated Word](javascript/code-challenges/repeatedWords/README.md)
 - Challenge 37: [Left Join](javascript/code-challenges/leftJoin/README.md)
 
-
 # 301 Code Challenges
 
 ### Table of Contents
@@ -44,6 +43,14 @@
 - Challenge 12 - Two-dimensional arrays
 - Challenge 13 - Includes, every, substring, charAt
 - Challenge 14 - Everything
+
+# Resources
+
+- [CF Singly Linked Lists](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-05/resources/singly_linked_list.html)
+- [CF Stacks and Queues](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-10/resources/stacks_and_queues.html)
+- [CF Trees](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-15/resources/Trees.html)
+- [CF Hash Tables](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-30/resources/Hashtables.html)
+- [CF Graphs](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-35/resources/graphs.html)
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
 
